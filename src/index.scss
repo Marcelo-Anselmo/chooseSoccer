@@ -1,0 +1,12 @@
+@use '../src/styles/mixins' as *;
+
+.app{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+}

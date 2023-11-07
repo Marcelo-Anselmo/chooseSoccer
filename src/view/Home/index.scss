@@ -1,0 +1,26 @@
+@use '../src/styles/mixins' as *;
+@use '../src/styles/variables' as *;
+
+.bghome{
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-image: url('bghome.svg');
+}
+
+.home{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  width: 100vw;
+}

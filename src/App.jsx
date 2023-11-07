@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import './App.css'
+import './index.scss'
 import { Link } from 'react-router-dom'
 
-function App() {
-
+export default function App() {
   return (
     <>
-      <section>
+      <section className='app'>
         <h1>Choose Soccer</h1>
         <p>Onde seu palpite é valioso</p>
         <Link to={'./Home'}>Iniciar</Link>
@@ -14,5 +12,3 @@ function App() {
     </>
   )
 }
-
-export default App;

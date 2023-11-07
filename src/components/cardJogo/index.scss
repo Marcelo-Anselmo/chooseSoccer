@@ -1,0 +1,93 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+.cardgeral{
+  @include box-model($borda-grande);
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.cardjogo{
+  @include flex-position(
+    flex,
+    row,
+    auto,
+    center,
+    center,
+    center
+  );
+  width: 70vw;
+  height: 15vh;
+  background-color: aqua;
+  margin-bottom: 0;
+
+  &__aside{
+    width: 35vw;
+
+    h2{
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 400;
+      padding: 0 3rem;
+      cursor: default;
+      color: aliceblue
+    }
+  }
+
+  &__asideleft{
+    @include flex-position(
+      flex,
+      row,
+      auto,
+      end,
+      center,
+      center
+    );
+    height: 15vh;
+    padding: 0 4rem;
+    background-color: rgba(216, 53, 3, 0.911);
+  }
+  
+  &__asideright{
+    @include flex-position(
+      flex,
+      row-reverse,
+      auto,
+      start,
+      center,
+      center
+    );
+    height: 15vh;
+    padding: 0 4rem;
+    background-color: rgb(91, 194, 253);
+  }
+
+  .placarflutuante{
+    @include box-model($borda-pequena);
+    padding: .3rem .8rem;
+    background-color: $cor-bg-branco;
+    position: absolute;
+  }
+}
+
+.cardinfo{
+  @include flex-position(
+      flex,
+      column,
+      auto,
+      center,
+      center,
+      center
+    );
+    flex-wrap: wrap;
+  width: 70vw;
+  height: 7vh;
+  background-color: $cor-bg-branco;
+  cursor: default;
+  
+  h1{
+    font-weight: 600;
+    color: #232323;
+  }
+}
