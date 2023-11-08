@@ -23,4 +23,7 @@
     center
   );
   width: 100vw;
+  min-height: 100vh;
+  padding: 4rem;
+  backdrop-filter: blur(4px);
 }

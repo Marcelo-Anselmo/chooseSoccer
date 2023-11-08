@@ -1,9 +1,14 @@
 import './index.scss'
+import { useState } from 'react';
+import CardDetail from '../cardDetail/CardDetail';
+import CardDetailShow from '../cardDetailShow/CardDetailShow';
 
 export default function CardJogo() {
+  const [isVisible, setIsVisible] = useState(false);
+  
   return (
     <>
-      <div className='cardgeral'>
+      <div className='cardgeral' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
         <section className="cardjogo">
           <div className="cardjogo__aside cardjogo__asideleft">
             <h2>roma</h2>
@@ -16,7 +21,9 @@ export default function CardJogo() {
           <div className='placarflutuante'>1 x 9</div>
         </section>
         <section className='cardinfo'>
-          <h1>PALPITE AGORA</h1>
+          {!isVisible ? (
+            <CardDetail/>
+          ) :  <CardDetailShow/>}
         </section>
       </div>
     </>

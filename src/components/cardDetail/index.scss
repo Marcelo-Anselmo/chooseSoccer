@@ -1,0 +1,12 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+.carddetail{
+  h1{
+    padding: .6rem;
+    font-weight: 600;
+    color: #232323;
+  }
+}
+

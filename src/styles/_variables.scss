@@ -1,8 +1,10 @@
 //cor
 
-$cor-bg-preto: #232323;
-$cor-bg-branco: #ededed;
-$cor-borda: #aaaaaa;
+$cor-preto: #232323;
+$cor-branco: #ededed;
+$cor-verde-claro: #a9fb49;
+$cor-verde-escuro: #05a625;
+$cor-cinza: #aaaaaa;
 $cor-shadow: #00000040;
 
 
@@ -10,5 +12,16 @@ $cor-shadow: #00000040;
 
 $borda-pequena: .3rem;
 $borda-grande: .6rem;
-$borda: 0.5px solid $cor-borda;
+$borda: 0.5px solid $cor-cinza;
 $borda-shadow: 0px 1px 1px 0px $cor-shadow;
+
+
+
+@keyframes status{
+  0%{
+    color: $cor-verde-escuro;
+  }
+  100%{
+    color: $cor-preto;
+  }
+}

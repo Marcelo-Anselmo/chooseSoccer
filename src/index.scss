@@ -1,12 +1,53 @@
 @use '../src/styles/mixins' as *;
+@use '../src/styles/variables' as *;
 
 .app{
-  @include flex-position(
-    flex,
-    column,
-    auto,
-    center,
-    center,
-    center
-  );
+  background-image: url('bghome.svg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  
+  &__filter{
+    @include flex-position(
+      flex,
+      column,
+      auto,
+      center,
+      center,
+      center
+    );
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+  }
+
+  h1{
+    color: $cor-branco;
+    font-size: 162px;
+    line-height: 110%;
+  }
+
+  p{
+    color: $cor-branco;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  a{
+    margin-top: 2rem;
+  }
+
+  button{
+    @include box-model($borda-pequena);
+    font-size: 20px;
+    padding: .2rem 7rem;
+    cursor: pointer;
+    transition-duration: .4s;
+
+    &:hover{
+      transform: scale(1.05);
+      transition-duration: .4s;
+      background-color: $cor-verde-claro;
+    }
+  }
 }

@@ -6,6 +6,7 @@
   @include box-model($borda-grande);
   height: auto;
   margin-top: 1.5rem;
+  width: 60vw
 }
 
 .cardjogo{
@@ -17,21 +18,20 @@
     center,
     center
   );
-  width: 70vw;
+  width: 60vw;
   height: 15vh;
-  background-color: aqua;
   margin-bottom: 0;
 
   &__aside{
-    width: 35vw;
+    width: 30vw;
 
     h2{
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 400;
       padding: 0 3rem;
       cursor: default;
-      color: aliceblue
+      color: $cor-preto;
     }
   }
 
@@ -46,7 +46,7 @@
     );
     height: 15vh;
     padding: 0 4rem;
-    background-color: rgba(216, 53, 3, 0.911);
+    background-color: $cor-verde-claro;
   }
   
   &__asideright{
@@ -60,13 +60,13 @@
     );
     height: 15vh;
     padding: 0 4rem;
-    background-color: rgb(91, 194, 253);
+    background-color: $cor-verde-escuro;
   }
 
   .placarflutuante{
     @include box-model($borda-pequena);
     padding: .3rem .8rem;
-    background-color: $cor-bg-branco;
+    background-color: $cor-branco;
     position: absolute;
   }
 }
@@ -81,13 +81,8 @@
       center
     );
     flex-wrap: wrap;
-  width: 70vw;
-  height: 7vh;
-  background-color: $cor-bg-branco;
+  width: 60vw;
+  height: auto;
+  background-color: $cor-branco;
   cursor: default;
-  
-  h1{
-    font-weight: 600;
-    color: #232323;
-  }
 }
