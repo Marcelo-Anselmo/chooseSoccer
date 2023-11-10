@@ -1,11 +1,26 @@
 import './index.scss'
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import axios from 'axios';
+
 import CardDetail from '../cardDetail/CardDetail';
 import CardDetailShow from '../cardDetailShow/CardDetailShow';
 
 export default function CardJogo() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const [data, setData] = useState();
+
+  const fetchData = useCallback(async () => {
+    const response = await axios.get('https://choose-soccer-backend.vercel.app/')
+    setData(response.data)
+  }, [])
   
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
+  
+  console.log(data)
+
   return (
     <>
       <div className='cardgeral' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
@@ -23,10 +38,9 @@ export default function CardJogo() {
           <div className='placarflutuante'>1 x 9</div>
         </section>
         <section className='cardinfo'>
-        <CardDetailShow/>
-          {/* {!isVisible ? (
+          {!isVisible ? (
             <CardDetail/>
-          ) :  <CardDetailShow/>} */}
+          ) :  <CardDetailShow/>}
         </section>
       </div>
     </>
