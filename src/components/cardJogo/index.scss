@@ -6,7 +6,7 @@
   @include box-model($borda-grande);
   height: auto;
   margin-top: 1.5rem;
-  width: 60vw
+  width: 70vw
 }
 
 .cardjogo{
@@ -18,18 +18,24 @@
     center,
     center
   );
-  width: 60vw;
-  height: 15vh;
+  width: 70vw;
+  height: 12vh;
   margin-bottom: 0;
 
+  img{
+    width: 60px;
+  }
+
   &__aside{
-    width: 30vw;
+    width: 45vw;
+    height: 12vh;
+    padding: 0 4rem;
 
     h2{
       text-transform: uppercase;
-      font-size: 25px;
+      font-size: 1rem;
       font-weight: 400;
-      padding: 0 3rem;
+      padding: 0 1.5rem;
       cursor: default;
       color: $cor-preto;
     }
@@ -44,8 +50,6 @@
       center,
       center
     );
-    height: 15vh;
-    padding: 0 4rem;
     background-color: $cor-verde-claro;
   }
   
@@ -58,14 +62,12 @@
       center,
       center
     );
-    height: 15vh;
-    padding: 0 4rem;
     background-color: $cor-verde-escuro;
   }
 
   .placarflutuante{
     @include box-model($borda-pequena);
-    padding: .3rem .8rem;
+    padding: .3rem .7rem;
     background-color: $cor-branco;
     position: absolute;
   }
@@ -73,16 +75,110 @@
 
 .cardinfo{
   @include flex-position(
-      flex,
-      column,
-      auto,
-      center,
-      center,
-      center
-    );
-    flex-wrap: wrap;
-  width: 60vw;
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  flex-wrap: wrap;
+  width: 70vw;
   height: auto;
   background-color: $cor-branco;
   cursor: default;
+}
+
+@include viewport(xl){
+  .cardgeral{
+    width: 90vw;
+  }
+
+  .cardjogo{
+    width: 90vw;
+
+    &__aside{
+      width: 45vw;
+      padding: 0 3rem;
+    }
+    
+    &__aside h2{
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
+  .cardinfo{
+    width: 90vw;
+  }
+}
+
+@include viewport(md){
+  .cardjogo{
+    height: 10vh;
+
+    img{
+      width: 45px;
+    }
+
+    &__aside{
+      padding: 0 3.5rem;
+      height: 10vh;
+    }
+
+    &__aside h2{
+      padding: 0 1rem;
+      font-size: .8rem;
+    }
+  }
+
+  .cardinfo{
+    width: 90vw;
+  }
+}
+
+@include viewport(smd){
+  .cardjogo{
+
+    img{
+      width: 30px;
+    }
+
+    &__aside{
+      padding: 0 2.5rem;
+    }
+
+    &__aside h2{
+      font-size: .7rem;
+    }
+  }
+
+  .placarflutuante{
+    font-size: 14px;
+  }
+}
+
+@include viewport(sm){
+  .cardjogo{
+    height: 10vh;
+    &__aside{
+      height: 10vh;
+      padding: 0 2rem;
+    }
+
+    p{
+      padding: 1rem;
+    }
+
+    &__aside h2{
+      display: none;
+      font-size: 10px;
+      padding: .5rem 1rem;
+    }
+  }
+
+  .placarflutuante{
+    font-size: 10px;
+    padding: .2rem .5rem;
+  }
 }

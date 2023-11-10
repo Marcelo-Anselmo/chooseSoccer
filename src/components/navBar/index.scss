@@ -68,3 +68,23 @@
   
   }
 }
+
+@include viewport(sm){
+  .navbar{
+    display: flex;
+    justify-content: center;
+    &__logo{
+      width: 65%;
+      font-size: 20px;
+    }
+  }
+}
+
+@include viewport(xs){
+  .navbar{
+    &__logo{
+      width: 65%;
+      font-size: 15px;
+    }
+  }
+}

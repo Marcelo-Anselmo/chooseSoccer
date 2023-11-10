@@ -11,9 +11,6 @@ export default function Home() {
           <CardJogo />
           <CardJogo />
           <CardJogo />
-          <CardJogo />
-          <CardJogo />
-          <CardJogo />
         </div>
       </div>
     </>

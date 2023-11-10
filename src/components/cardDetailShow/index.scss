@@ -10,7 +10,7 @@
     center,
     center
   );
-  width: 60vw;
+  width: 70vw;
   height: auto;
 
   &__info{
@@ -22,8 +22,7 @@
       center,
       center
     );
-    width: 60vw;
-    height: 3vw;
+    width: 70vw;
     gap: 3rem;
 
     p{
@@ -33,7 +32,40 @@
   }
 
   &__content{
-    width: 60vw;
+    width: 70vw;
     height: 10vh;
+  }
+}
+
+@include viewport(xl){
+  .carddetailshow{
+    width: 90vw;
+
+    &__info{
+      width: 90vw;
+    }
+
+    &__content{
+      width: 90vw;
+    }
+    
+  }
+}
+
+@include viewport(md){
+  .carddetailshow{
+
+    &__info{
+      gap: 1rem;
+      p{
+        font-size: 14px;
+        padding: 1rem .4rem;
+      }
+    }
+  }
+}
+
+@include viewport(sm){
+  .carddetailshow{
   }
 }

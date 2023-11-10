@@ -11,19 +11,22 @@ export default function CardJogo() {
       <div className='cardgeral' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
         <section className="cardjogo">
           <div className="cardjogo__aside cardjogo__asideleft">
-            <h2>roma</h2>
+            <p>RMA</p>
+            <h2>Universidad Catolica do Chile escambau</h2>
             <img src="time01.svg" alt="" />
           </div>
           <div className="cardjogo__aside cardjogo__asideright">
+            <p>CITY</p>
             <h2>manchester city</h2>
             <img src="time02.svg" alt="" />
           </div>
           <div className='placarflutuante'>1 x 9</div>
         </section>
         <section className='cardinfo'>
-          {!isVisible ? (
+        <CardDetailShow/>
+          {/* {!isVisible ? (
             <CardDetail/>
-          ) :  <CardDetailShow/>}
+          ) :  <CardDetailShow/>} */}
         </section>
       </div>
     </>

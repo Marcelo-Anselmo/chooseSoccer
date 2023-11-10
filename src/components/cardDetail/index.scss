@@ -10,3 +10,27 @@
   }
 }
 
+@include viewport(xl){
+  .carddetail{
+    h1{
+      font-size: 20px;
+    }
+  }
+}
+
+@include viewport(md){
+  .carddetail{
+    h1{
+      font-size: 18px;
+    }
+  }
+}
+
+@include viewport(sm){
+  .carddetail{
+    h1{
+      font-size: 16px;
+    }
+  }
+}
+
