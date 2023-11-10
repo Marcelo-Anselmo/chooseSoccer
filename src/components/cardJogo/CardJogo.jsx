@@ -1,28 +1,22 @@
 import './index.scss'
-import { useCallback, useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 import CardDetail from '../cardDetail/CardDetail';
 import CardDetailShow from '../cardDetailShow/CardDetailShow';
+import useFetch from '../../hooks/useFetch';
 
 export default function CardJogo() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
-  const [data, setData] = useState();
+  const { data, isFetching } = useFetch('https://choose-soccer-backend.vercel.app/')
 
-  const fetchData = useCallback(async () => {
-    const response = await axios.get('https://choose-soccer-backend.vercel.app/')
-    setData(response.data)
-  }, [])
-  
-  useEffect(() => {
-    fetchData()
-  }, [fetchData])
-  
-  console.log(data)
 
   return (
     <>
+      <div style={{backgroundColor: 'aliceblue', padding: '1rem'}}>
+        <h1>jogos da rodada {data.rodada}</h1>
+        {isFetching && <p>CARREGANDO..</p>}
+      </div>
       <div className='cardgeral' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
         <section className="cardjogo">
           <div className="cardjogo__aside cardjogo__asideleft">
@@ -39,10 +33,11 @@ export default function CardJogo() {
         </section>
         <section className='cardinfo'>
           {!isVisible ? (
-            <CardDetail/>
-          ) :  <CardDetailShow/>}
+            <CardDetail />
+          ) : <CardDetailShow />}
         </section>
       </div>
     </>
   )
 }
+

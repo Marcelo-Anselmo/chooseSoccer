@@ -6,7 +6,8 @@
   @include box-model($borda-grande);
   height: auto;
   margin-top: 1.5rem;
-  width: 70vw
+  width: 70vw;
+  background-color: aliceblue; 
 }
 
 .cardjogo{
