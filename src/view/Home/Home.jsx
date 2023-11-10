@@ -1,10 +1,18 @@
-import React from "react";
 import './index.scss';
+import CardJogo from '../../components/cardJogo/CardJogo';
+import NavBar from '../../components/navBar/Navbar';
 
-const Home = () => {
-  return <section>
-    <h1>Bem-Vindo ao ChooseSoccer</h1>
-  </section>
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <>
+      <div className='bghome'>
+        <NavBar/>
+        <div className="home">
+          <CardJogo />
+          <CardJogo />
+          <CardJogo />
+        </div>
+      </div>
+    </>
+  )
+}

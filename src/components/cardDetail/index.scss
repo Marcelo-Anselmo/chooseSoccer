@@ -1,0 +1,36 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+.carddetail{
+  h1{
+    padding: .6rem;
+    font-weight: 600;
+    color: #232323;
+  }
+}
+
+@include viewport(xl){
+  .carddetail{
+    h1{
+      font-size: 20px;
+    }
+  }
+}
+
+@include viewport(md){
+  .carddetail{
+    h1{
+      font-size: 18px;
+    }
+  }
+}
+
+@include viewport(sm){
+  .carddetail{
+    h1{
+      font-size: 16px;
+    }
+  }
+}
+

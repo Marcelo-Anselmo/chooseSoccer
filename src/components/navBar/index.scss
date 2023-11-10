@@ -1,0 +1,90 @@
+@use '../src/styles/mixins' as *;
+@use '../src/styles/variables' as *;
+
+.navbar{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 4rem;
+  background-color: $cor-preto;
+  z-index: 1;
+  color: $cor-branco;
+
+  a{
+    display: flex;
+
+    &:hover{
+      transform: scale(1.05);
+      transition-duration: .4s;
+      color: $cor-verde-claro;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+  }
+
+  &__logo{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    font-size: 25px;
+    color: $cor-verde-claro;
+    
+  }
+
+  &__status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    
+    svg{
+      animation: status .4s infinite alternate;
+      
+    }
+
+    p{
+      margin-left: .3rem      
+    }
+  }
+
+  button{
+    @include box-model($borda-pequena);
+    font-size: 20px;
+    padding: .2rem 1rem;
+    cursor: pointer;
+    transition-duration: .4s;
+  }
+
+  button:hover{
+    transform: scale(1.05);
+    transition-duration: .4s;
+    background-color: $cor-verde-claro;
+  
+  }
+}
+
+@include viewport(sm){
+  .navbar{
+    display: flex;
+    justify-content: center;
+    &__logo{
+      width: 65%;
+      font-size: 20px;
+    }
+  }
+}
+
+@include viewport(xs){
+  .navbar{
+    &__logo{
+      width: 65%;
+      font-size: 15px;
+    }
+  }
+}
