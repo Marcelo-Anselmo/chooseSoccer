@@ -89,6 +89,28 @@
   }
 }
 
+.likeBtn{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+
+  &__BtnLeft {
+      display: flex;
+    }
+  
+    &__BtnRight {
+
+      .__likeBtnLeft{
+        transform: rotateY(180deg);
+      }
+      
+    }
+
+    .liked {
+      color: $cor-verde-claro;
+    }
+}
 
 
 
