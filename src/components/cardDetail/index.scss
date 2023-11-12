@@ -3,6 +3,9 @@
 
 
 .carddetail{
+  height: auto;
+  width: 70vw;
+
   h1{
     padding: .6rem;
     font-weight: 600;
@@ -10,8 +13,98 @@
   }
 }
 
+.carddetailshow{
+  &__info{
+    display: flex;
+    justify-content: center;
+    color: $cor-branco;
+    padding: .3rem;
+    gap: 1rem;
+    
+    background-color: $cor-cinza;
+
+    p{
+      display: flex;
+      align-items: center;
+      font-size: .8rem;
+      gap: .4rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    
+    p{
+      margin: .4rem;
+    }
+  }
+}
+
+.carddetailshowcontent{
+  width: 70vw;
+  &__aside{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    &--left{
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .resultados{
+      display: flex;
+      flex-direction: column;
+      color: $cor-cinza;
+
+      p{
+        margin: 0;
+        padding: 0;
+        
+      }
+      
+      &__aproveitamento{
+        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &--mid{
+      width: 20vw;
+      background-color: aqua;
+    }
+
+    &--right{
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @include viewport(xl){
   .carddetail{
+    width: 90vw;
     h1{
       font-size: 20px;
     }
