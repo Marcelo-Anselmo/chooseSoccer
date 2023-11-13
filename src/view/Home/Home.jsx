@@ -1,6 +1,6 @@
 import "./index.scss";
 import CardJogo from "../../components/cardJogo/CardJogo";
-import NavBar from "../../components/navBar/Navbar";
+import NavBar from "../../components/navBar/NavBar";
 
 export default function Home() {
   return (
