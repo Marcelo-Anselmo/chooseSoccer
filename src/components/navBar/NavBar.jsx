@@ -2,6 +2,7 @@ import './index.scss'
 import { BiSolidCircle } from "react-icons/bi";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom'
+import React from 'react';
 
 export default function NavBar() {
   return (
