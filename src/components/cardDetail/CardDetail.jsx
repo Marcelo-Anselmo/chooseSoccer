@@ -1,7 +1,6 @@
 import "./index.scss";
 import { useState } from "react";
-import { FaLocationDot, FaClock, FaThumbsUp } from "react-icons/fa6";
-// import { BiLike } from 'react-icons/bi'; “react-icons/bi”;
+import { FaLocationDot, FaClock, FaThumbsUp, FaThumbsDown } from "react-icons/fa6";
 export default function CardDetail({ partida }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -61,7 +60,7 @@ export default function CardDetail({ partida }) {
       className="carddetail"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}>
-      {!isVisible ? (
+      {isVisible ? (
         <div>
           <h1>PALPITE AGORA</h1>
         </div>
@@ -81,7 +80,7 @@ export default function CardDetail({ partida }) {
             <div className="carddetailshowcontent__aside">
               <div className="carddetailshowcontent__aside--left">
                 <div className="resultados">
-                  <p>aproveitamento</p>
+                  <p>Aproveitamento</p>
                   <div className="resultados__aproveitamento">
                     {partida.aproveitamento_mandante.map((aproveitamento) => (
                       <p>{aproveitamento}</p>
@@ -92,27 +91,27 @@ export default function CardDetail({ partida }) {
               <div className="carddetailshowcontent__aside--mid">
                 <p>Quem será o vencedor da rodada?</p>
                 <div className="likeBtn">
-                  <div className="__BtnLeft">
+                  <div className="likeBtn__BtnLeft">
+                    <p>{isLikeL}</p>
                     <FaThumbsUp
                       onClick={() => handleCountL()}
-                      className={`__likeBtnLeft ${likedLeft ? "liked" : ""}`}
-                      size={30}
+                      className={`btnLikeL ${likedLeft ? "liked" : ""}`}
+                      size={22}
                     />
-                    <p>{isLikeL}</p>
                   </div>
-                  <div className="__BtnRight">
-                    <FaThumbsUp
-                      onClick={() => handleCountR()}
-                      className={`__likeBtnLeft ${likedRight ? "liked" : ""}`}
-                      size={30}
-                    />
+                  <div className="likeBtn__BtnRight">
                     <p>{isLikeR}</p>
+                    <FaThumbsDown
+                      onClick={() => handleCountR()}
+                      className={`btnLikeR${likedRight ? "liked" : ""}`}
+                      size={22}
+                    />
                   </div>
                 </div>
               </div>
               <div className="carddetailshowcontent__aside--right">
                 <div className="resultados">
-                  <p>aproveitamento</p>
+                  <p>Aproveitamento</p>
                   <div className="resultados__aproveitamento">
                     {partida.aproveitamento_visitante.map((aproveitamento) => (
                       <p>{aproveitamento}</p>

@@ -68,7 +68,7 @@
       }
       
       &__aproveitamento{
-        gap: 1rem;
+        gap: .8rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -76,8 +76,7 @@
     }
 
     &--mid{
-      width: 20vw;
-      background-color: aqua;
+      width: 35vw;
     }
 
     &--right{
@@ -93,26 +92,45 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
   cursor: pointer;
+  color: $cor-cinza;
 
-  &__BtnLeft {
-      display: flex;
-    }
+  &__BtnLeft{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .8rem;
+  }
+
+  &__BtnRight{
+    display: flex;
+    gap: .8rem;
+  }
   
-    &__BtnRight {
+  p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    
+  }
 
-      .__likeBtnLeft{
-        transform: rotateY(180deg);
-      }
-      
-    }
+    
 
     .liked {
-      color: $cor-verde-claro;
+      color: $cor-preto;
     }
+
+
 }
 
+.btnLikeR{
+  transform: rotate(180deg);
+}
 
+.btnLikeRliked{
+  transform: rotate(180deg);
+  color: $cor-preto;
+}
 
 
 
@@ -146,6 +164,27 @@
     h1{
       font-size: 16px;
     }
+  }
+
+  .carddetailshowcontent__aside--left{
+    display: none;
+  }
+
+  .carddetailshowcontent__aside--mid{
+    width: 70vw;
+  }
+
+  .carddetailshowcontent__aside--right{
+    display: none;
+  }
+
+
+  .likeBtn__BtnLeft{
+    gap: .4rem;
+  }
+
+  .likeBtn__BtnRight{
+    gap: .4rem;
   }
 }
 
