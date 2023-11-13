@@ -1,8 +1,37 @@
-# React + Vite
+# ⚽ Choose Soccer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💭 Onde seu palpite é valioso! Participe dessa comunidade, e vote no time que será o vencedor!
 
-Currently, two official plugins are available:
+https://choose-soccer.vercel.app/
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Preview em tempo real dos jogos do Brasileirão serie A
+- Multiplataforma
+- Votação em tempo real
+
+
+## Stack utilizada
+
+**Front-end:** React(vite), Sass, Javascript
+
+**Back-end:** NodeJs, Express
+
+
+## Comandos para rodar o projeto
+
+Rode o seguinte comando
+
+```bash
+  npm install
+  
+  npm run dev
+```
+
+
+## Autores
+
+- [GitHub @Marcelo-Anselmo](https://github.com/Marcelo-Anselmo)
+- [Linkedin- Marcelo Anselmo](https://www.linkedin.com/in/marcelo-anselmo-41587b280/)
+- [GitHub @Andre-Campos](https://github.com/DDR23)
+- [Linkedin- André Campos](https://www.linkedin.com/in/andr%C3%A9-campos-25193a257/)
+
