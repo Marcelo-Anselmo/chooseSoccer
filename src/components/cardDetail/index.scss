@@ -3,6 +3,9 @@
 
 
 .carddetail{
+  height: auto;
+  width: 70vw;
+
   h1{
     padding: .6rem;
     font-weight: 600;
@@ -10,8 +13,125 @@
   }
 }
 
+.carddetailshow{
+  &__info{
+    display: flex;
+    justify-content: center;
+    color: $cor-branco;
+    padding: .3rem;
+    gap: 1rem;
+    
+    background-color: $cor-cinza;
+
+    p{
+      display: flex;
+      align-items: center;
+      font-size: .8rem;
+      gap: .4rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    
+    p{
+      margin: .4rem;
+    }
+  }
+}
+
+.carddetailshowcontent{
+  width: 70vw;
+  &__aside{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    &--left{
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .resultados{
+      display: flex;
+      flex-direction: column;
+      color: $cor-cinza;
+
+      p{
+        margin: 0;
+        padding: 0;
+        
+      }
+      
+      &__aproveitamento{
+        gap: .8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &--mid{
+      width: 35vw;
+    }
+
+    &--right{
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.likeBtn{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  color: $cor-cinza;
+
+  &__BtnLeft{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .8rem;
+  }
+
+  &__BtnRight{
+    display: flex;
+    gap: .8rem;
+  }
+  
+  p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .liked {
+    color: $cor-preto;
+  }
+}
+
+.btnLikeR{
+  transform: rotate(180deg);
+}
+
+.btnLikeRliked{
+  transform: rotate(180deg);
+  color: $cor-preto;
+}
+
+
 @include viewport(xl){
   .carddetail{
+    width: 90vw;
     h1{
       font-size: 20px;
     }
@@ -32,5 +152,25 @@
       font-size: 16px;
     }
   }
-}
 
+  .carddetailshowcontent__aside--left{
+    display: none;
+  }
+
+  .carddetailshowcontent__aside--mid{
+    width: 70vw;
+  }
+
+  .carddetailshowcontent__aside--right{
+    display: none;
+  }
+
+
+  .likeBtn__BtnLeft{
+    gap: .4rem;
+  }
+
+  .likeBtn__BtnRight{
+    gap: .4rem;
+  }
+}

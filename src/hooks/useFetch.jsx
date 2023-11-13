@@ -18,7 +18,6 @@ export default function useFetch(url) {
         setIsFetching(false)
       })
   }, [])
-
   
   return { data, error, isFetching }
 }
