@@ -1,8 +1,12 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-
+header{
+  color: $cor-branco;
+  margin-top: 1.4rem;
+}
 span{
+  margin: 2rem;
   padding: .5rem;
   background-color: $cor-branco;
 }

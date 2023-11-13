@@ -32,7 +32,7 @@ export default function CardJogo() {
                 <div className='placarflutuante'>{partida.placar_oficial_mandante} x {partida.placar_oficial_visitante}</div>
               </section>
               <section className='cardinfo'>
-                <CardDetail partida={partida}/>
+                <CardDetail partida={partida} />
               </section>
             </div>
           </>
@@ -45,6 +45,10 @@ export default function CardJogo() {
 
   return (
     <>
+      <header className='header'>
+        <h1>Brasileirão Séria A</h1>
+        <p>Rodada {data.rodada}</p>
+      </header>
       {renderContent()}
     </>
   )
