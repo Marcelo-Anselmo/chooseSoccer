@@ -2,11 +2,16 @@
 @use '../../styles/variables' as *;
 
 
+span{
+  padding: .5rem;
+  background-color: $cor-branco;
+}
+
 .cardgeral{
   @include box-model($borda-grande);
   height: auto;
   margin-top: 1.5rem;
-  width: 70vw
+  width: 70vw;
 }
 
 .cardjogo{
@@ -30,6 +35,10 @@
     width: 45vw;
     height: 12vh;
     padding: 0 4rem;
+
+    p{
+      font-size: .7rem;
+    }
 
     h2{
       text-transform: uppercase;
