@@ -60,7 +60,7 @@ export default function CardDetail({ partida }) {
       className="carddetail"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}>
-      {isVisible ? (
+      {!isVisible ? (
         <div>
           <h1>PALPITE AGORA</h1>
         </div>
@@ -126,5 +126,3 @@ export default function CardDetail({ partida }) {
     </div>
   );
 }
-
-// {!isVisible ? (<CardDetail />) : <CardDetailShow partida={partida} clubes={data.clubes} />}

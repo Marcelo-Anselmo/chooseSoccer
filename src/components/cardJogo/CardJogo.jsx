@@ -1,5 +1,4 @@
 import './index.scss'
-
 import CardDetail from '../cardDetail/CardDetail'
 import useFetch from '../../hooks/useFetch'
 

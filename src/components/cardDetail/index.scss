@@ -114,13 +114,9 @@
     
   }
 
-    
-
-    .liked {
-      color: $cor-preto;
-    }
-
-
+  .liked {
+    color: $cor-preto;
+  }
 }
 
 .btnLikeR{
@@ -131,15 +127,6 @@
   transform: rotate(180deg);
   color: $cor-preto;
 }
-
-
-
-
-
-
-
-
-
 
 
 @include viewport(xl){
@@ -187,4 +174,3 @@
     gap: .4rem;
   }
 }
-
